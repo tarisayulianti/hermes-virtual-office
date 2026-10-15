@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hermes · Virtual Office</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud">
+      <div class="brand">HERMES <span>· VIRTUAL OFFICE</span></div>
+      <div class="pill demo">DEMO</div>
+      <div class="stat"><span class="k">LIVE</span><span class="v ok" id="liveState">OFF</span></div>
+      <div class="stat"><span class="k">PAIR</span><span class="v" id="pair">BTCUSDT 15m</span></div>
+      <div class="stat"><span class="k">EQUITY</span><span class="v warn" id="equity">~9991</span></div>
+      <div class="stat"><span class="k">POS</span><span class="v" id="pos">1 LONG</span></div>
+      <div class="stat"><span class="k">UPTIME</span><span class="v" id="uptime">00:00:00</span></div>
+      <div class="stat"><span class="k">STATE</span><span class="v ok" id="sysState">RUNNING</span></div>
+    </header>
+
+    <main class="office" id="office">
+      <section class="room war" data-room="war">
+        <h2>Strategy War Room</h2>
+        <div class="chart-wall" aria-hidden="true"></div>
+      </section>
+      <section class="room floor" data-room="floor">
+        <h2>Trading Floor</h2>
+        <div class="flow-line" aria-hidden="true"></div>
+      </section>
+      <section class="room risk" data-room="risk">
+        <h2>Risk Desk</h2>
+        <div class="barrier">MANDATORY BARRIER</div>
+      </section>
+      <section class="room portfolio" data-room="portfolio">
+        <h2>Portfolio Hall</h2>
+        <div class="books">
+          <div>Cash <b id="cash">1170.06</b></div>
+          <div>Exposure <b id="exposure">8821.12</b></div>
+          <div>Fees <b id="fees">8.82</b></div>
+        </div>
+      </section>
+      <section class="room watch" data-room="watch">
+        <h2>Watchtower</h2>
+        <div class="alerts" id="alerts"></div>
+      </section>
+      <section class="room archive" data-room="archive">
+        <h2>Evidence Archive</h2>
+        <div class="sha">DB SHA <code id="dbSha">4dcfbf41…8e22a65</code></div>
+      </section>
+
+      <div id="agents"></div>
+    </main>
+
+    <aside class="panel" id="panel" hidden>
+      <button class="close" id="panelClose" aria-label="Close">×</button>
+      <div id="panelImg" class="avatar panel-avatar" style="--c:#28e0c8">H</div>
+      <h3 id="panelName"></h3>
+      <p class="role" id="panelRole"></p>
+      <div class="badge" id="panelStatus">IDLE</div>
+      <dl id="panelMeta"></dl>
+      <div class="log" id="panelLog"></div>
+    </aside>
+
+    <footer class="timeline">
+      <div class="tl-title">Journal</div>
+      <ul id="timeline"></ul>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
